@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "aholddelhaize.be",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": null,
+    "expiry_date": null,
+    "nameservers": [],
+    "data_source": "who.is (Playwright)"
+  },
+  {
+    "domain": "delhaize.be",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": null,
+    "expiry_date": null,
+    "nameservers": [],
+    "data_source": "who.is (Playwright)"
+  },
+  {
+    "domain": "pingodoce.pt",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": null,
+    "expiry_date": null,
+    "nameservers": [],
+    "data_source": "who.is (Playwright)"
+  }
+]

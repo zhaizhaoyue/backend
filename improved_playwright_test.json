@@ -1,0 +1,57 @@
+[
+  {
+    "domain": "delhaize.be",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": "11/15/1999",
+    "expiry_date": null,
+    "nameservers": [],
+    "status": "REGISTERED",
+    "data_source": "who.is (Playwright)",
+    "success": true
+  },
+  {
+    "domain": "aholddelhaize.be",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": "6/24/2015",
+    "expiry_date": null,
+    "nameservers": [],
+    "status": "REGISTERED",
+    "data_source": "who.is (Playwright)",
+    "success": true
+  },
+  {
+    "domain": "pingodoce.pt",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": "4/6/1998",
+    "expiry_date": null,
+    "nameservers": [],
+    "status": "REGISTERED",
+    "data_source": "who.is (Playwright)",
+    "success": true
+  },
+  {
+    "domain": "aholddelhaize.eu",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": null,
+    "expiry_date": null,
+    "nameservers": [],
+    "status": null,
+    "data_source": "who.is (Playwright)",
+    "success": false
+  },
+  {
+    "domain": "delhaizewineworld.lu",
+    "registrant_org": null,
+    "registrar": null,
+    "creation_date": null,
+    "expiry_date": null,
+    "nameservers": [],
+    "status": null,
+    "data_source": "who.is (Playwright)",
+    "success": false
+  }
+]

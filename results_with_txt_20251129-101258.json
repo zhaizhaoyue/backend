@@ -1,0 +1,2340 @@
+{
+  "run_id": "20251129-101258",
+  "started_at": "2025-11-29T10:12:49.178323",
+  "finished_at": "2025-11-29T10:12:58.975256",
+  "domains_count": 75,
+  "results": [
+    {
+      "domain": "ah.nl",
+      "rdap_data": {
+        "domain": "ah.nl",
+        "registrant_organization": null,
+        "registrar": "KPN",
+        "registry": "SIDN",
+        "creation_date": "1995-04-23T22:00:00Z",
+        "expiry_date": null,
+        "nameservers": [
+          "a1-249.akam.net",
+          "a14-64.akam.net",
+          "a6-65.akam.net",
+          "a7-64.akam.net",
+          "a8-65.akam.net",
+          "a9-67.akam.net"
+        ],
+        "data_source": "https://rdap.sidn.nl/domain/ah.nl",
+        "timestamp": "2025-11-29T09:12:49.423140Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.34",
+          "2.16.6.21"
+        ],
+        "mx_records": [
+          "10 ah-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "facebook-domain-verification=jxk4mu3rwd7ka1wnhmxudvtdoatt96",
+          "MS=ms49548478",
+          "docker-verification=f3bda6e7-685d-4fa5-aedc-6f9b1215cbe9",
+          "airtable-verification=597bed7a8bd61012355d44fb43496161",
+          "docusign=d64bbad0-a329-416b-a91b-994d4921f69a",
+          "google-site-verification=lWxAQXPFiYqWSlcnL8MZF_ijFrHsQS93acOHEJ3tT9I",
+          "_zna9os0x7mwwix09uiclz31md52euf6",
+          "google-site-verification=RuZLXagupabN1jkH_Szne5gCiwcJRyjSJTa763eNwkM",
+          "mongodb-site-verification=mRGyiiCbKtOFB4hTcvt780JzXKNZW2PN",
+          "apple-domain-verification=krHbxuyr1gHwKStA",
+          "docusign=7c936727-559f-47df-b5bf-00051dda9458",
+          "v=spf1 include:_spf.ah.nl include:spf.protection.outlook.com include:eu.mailgun.org include:sendgrid.net include:_spfhandler.we-invite.eu include:spf.mailjet.com include:nw010.com include:_spf-dc57.sapsf.eu -all",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "segment-site-verification=RdaxQI9poxfh6sIRSXJsYJPIqfOyoN7h",
+          "adobe-idp-site-verification=31b4e7869e2cd912e3f02bba03305ac0b8b056d17a4779bd3aefa4b117db5fc8"
+        ],
+        "ns_records": [
+          "a14-64.akam.net.",
+          "a6-65.akam.net.",
+          "a8-65.akam.net.",
+          "a7-64.akam.net.",
+          "a1-249.akam.net.",
+          "a9-67.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "ahapp.nl",
+      "rdap_data": {
+        "domain": "ahapp.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:49.605057Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "81.169.145.66"
+        ],
+        "mx_records": [
+          "5 smtp.rzone.de."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "docks06.rzone.de.",
+          "shades15.rzone.de."
+        ]
+      }
+    },
+    {
+      "domain": "ahold.nl",
+      "rdap_data": {
+        "domain": "ahold.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:49.819958Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "40.91.196.192",
+          "40.118.81.46"
+        ],
+        "mx_records": [
+          "10 ahold-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "docusign=8a5a0813-1b80-43ea-89c3-8e58f0ce2580",
+          "MS=ms17433246",
+          "v=spf1 include:_spf.ahold.nl include:spf.protection.outlook.com include:spf.mailjet.com -all",
+          "google-site-verification=FplG5fJFLfMflxYNTUjlKbQYHMwsdtKalRYgdQUWLBA"
+        ],
+        "ns_records": [
+          "a9-67.akam.net.",
+          "a6-65.akam.net.",
+          "a1-249.akam.net.",
+          "a14-64.akam.net.",
+          "a8-65.akam.net.",
+          "a7-64.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "aholddelhaize.be",
+      "rdap_data": {
+        "domain": "aholddelhaize.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:49.862703Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "40.91.196.192",
+          "40.118.81.46"
+        ],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a14-64.akam.net.",
+          "a6-65.akam.net.",
+          "a7-64.akam.net.",
+          "a1-249.akam.net.",
+          "a8-65.akam.net.",
+          "a9-67.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "aholddelhaize.com",
+      "rdap_data": {
+        "domain": "aholddelhaize.com",
+        "registrant_organization": null,
+        "registrar": "Tucows Domains Inc.",
+        "registry": "Verisign",
+        "creation_date": "2015-05-11T06:15:17Z",
+        "expiry_date": "2026-05-11T06:15:17Z",
+        "nameservers": [
+          "A1-249.AKAM.NET",
+          "A14-64.AKAM.NET",
+          "A6-65.AKAM.NET",
+          "A7-64.AKAM.NET",
+          "A8-65.AKAM.NET",
+          "A9-67.AKAM.NET"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/aholddelhaize.com",
+        "timestamp": "2025-11-29T09:12:50.088826Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "162.159.140.127"
+        ],
+        "mx_records": [
+          "10 aholddelhaize-com.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "google-site-verification=StfJd57MQ-azB8K7LvnN_ktJKN17Z-ALHy43QzwAnJs",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "Dynatrace-site-verification=4dff6a7e-1967-4341-8033-fa98e484bd12__q18ig2du95abbphgbi4vdrtdfd",
+          "fyH/ZdwI6vYCEyTU+9yKSXyv1OPhzgebi8tkXVwCE5qTQwGqFr7ZAiqPOCzVWtdW/ykylgxRElDIEtqvK52+SA==",
+          "google-site-verification=SydmdzLXeCqZJE_DoMkwQLG9SCtlDLhhwifmUFRGEao",
+          "apple-domain-verification=r3blxCZwXClZDuri",
+          "_lv6d1qow30g7s3t5gxm4hdvqjax85vi",
+          "google-site-verification=3MW_4D50rK5ykC1U2Px21JajmGe0geB8Wd4WnEhQ9pk",
+          "mongodb-site-verification=0lRF74duE2tVUFNocVd6S7arGevGLrrZ",
+          "onetrust-domain-verification=f19314bbaf2d4e9fb61d3935f5d8a6f0",
+          "teamviewer-sso-verification=7ecf570c3ff240db9b52f2f2c6475712",
+          "_c3y2hra3j8g38fuzhj7c53rz7rm506q",
+          "_pjn4jo2xbnzqlnz5coswq3eatmijv65",
+          "_globalsign-domain-verification=hMvsJwKH8IUU5QAgZ9VwrpT21Z38orLMS5hQqdi7ri",
+          "docusign=47c55cd5-5ad3-4af8-8504-0bcb3bf58ca2",
+          "MS=EE69260EDF7281121034140BF799ABDBEAD30B70",
+          "apple-domain-verification=NO00C4zYTcJ2c7oQ",
+          "google-site-verification=hTYUDLnFxHphj--HkhnG8_--jQCVAt-AvTkyeJS43Cw",
+          "postman-domain-verification=0af2043639caa549c82b76f3c64d9ff6b090840e2ac897010abacca143b285624631dc770005eb491c105cfc01b4df63418c595bc0a12dd78cf0a3df1f82ea05",
+          "_9ipzz80dkf7vi2wsinzwmw7m5x04zzf",
+          "docusign=8be52e4f-ddee-46b2-b5e4-1371877db3e9",
+          "configcat-domain-verification=08db70a3-98b2-409c-80b9-9fb567617850",
+          "5gYTK5N8bGgnWCrIN09UDKvA/3MiuyouLI3mMEWjtu4tbeJphrtynYhfiNfXpHbmfKJ6UlnqtutEMFxDQu1Q7Q==",
+          "v=spf1 include:_spf.aholddelhaize.com include:_spf2.aholddelhaize.com include:_spf1.humantotalcare.nl include:spf.protection.outlook.com include:sendgrid.net include:spf.salesforce.com -all",
+          "Dynatrace-site-verification=722e5a7b-1afa-4b92-9aa0-f64947f2e411__48kc95a81empsp2vsv19j865no"
+        ],
+        "ns_records": [
+          "a1-249.akam.net.",
+          "a6-65.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a7-64.akam.net.",
+          "a8-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "aholddelhaize.eu",
+      "rdap_data": {
+        "domain": "aholddelhaize.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:50.135356Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "40.118.81.46",
+          "40.91.196.192"
+        ],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a9-67.akam.net.",
+          "a6-65.akam.net.",
+          "a14-64.akam.net.",
+          "a7-64.akam.net.",
+          "a8-65.akam.net.",
+          "a1-249.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "aholdgroup.com",
+      "rdap_data": {
+        "domain": "aholdgroup.com",
+        "registrant_organization": null,
+        "registrar": "Hefei Juming Network Technology Co., Ltd",
+        "registry": "Verisign",
+        "creation_date": "2022-11-29T13:09:03Z",
+        "expiry_date": "2025-11-29T13:09:03Z",
+        "nameservers": [
+          "AG1.JUMING.COM",
+          "AG2.JUMING.COM"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/aholdgroup.com",
+        "timestamp": "2025-11-29T09:12:50.235212Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "47.77.197.181"
+        ],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": [
+          "ag2.juming.com.",
+          "ag1.juming.com."
+        ]
+      }
+    },
+    {
+      "domain": "aholdholding.nl",
+      "rdap_data": {
+        "domain": "aholdholding.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:50.767789Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "aholdventures.com",
+      "rdap_data": {
+        "domain": "aholdventures.com",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:50.869921Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "ahzakelijk.nl",
+      "rdap_data": {
+        "domain": "ahzakelijk.nl",
+        "registrant_organization": null,
+        "registrar": "KPN",
+        "registry": "SIDN",
+        "creation_date": "2016-03-28T13:37:07Z",
+        "expiry_date": null,
+        "nameservers": [
+          "a8-65.akam.net",
+          "a9-67.akam.net",
+          "a6-65.akam.net",
+          "a7-64.akam.net",
+          "a1-249.akam.net",
+          "a14-64.akam.net"
+        ],
+        "data_source": "https://rdap.sidn.nl/domain/ahzakelijk.nl",
+        "timestamp": "2025-11-29T09:12:51.027213Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [
+          "10 ahzakelijk-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "MS=ms85457834",
+          "google-site-verification=st_94NdNPl4VuucYzjGF8IsN6HfEAFz5Nkj8VPe0jKA",
+          "v=spf1 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a8-65.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "albert.nl",
+      "rdap_data": {
+        "domain": "albert.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:51.188622Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.30",
+          "2.16.6.16"
+        ],
+        "mx_records": [
+          "10 albert-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "MS=ms98622480",
+          "docusign=0d9a3846-4d6a-4bac-b02c-d6b306fd33fa",
+          "google-site-verification=VGzT3NMiTxPh-W7fyJVYzXqe6tZteW0gxxikdFUAUNI",
+          "v=spf1 include:_spf.albert.nl include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a8-65.akam.net.",
+          "a7-64.akam.net.",
+          "a6-65.akam.net.",
+          "a1-249.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "albertheijn.nl",
+      "rdap_data": {
+        "domain": "albertheijn.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:51.347618Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.16",
+          "2.16.6.30"
+        ],
+        "mx_records": [
+          "10 albertheijn-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "google-site-verification=e_Axmb6KZIumFmCHw6PVaB1YDEzJzBPWib2G0wNe4D0",
+          "MS=ms22556667",
+          "v=spf1 include:spf.protection.outlook.com -all",
+          "docusign=020177e2-0f73-4c46-8616-2963c25f3205"
+        ],
+        "ns_records": [
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a14-64.akam.net.",
+          "a8-65.akam.net.",
+          "a9-67.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "albert-heijn.nl",
+      "rdap_data": {
+        "domain": "albert-heijn.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:51.510639Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.30",
+          "2.16.6.16"
+        ],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a1-249.akam.net.",
+          "a6-65.akam.net.",
+          "a9-67.akam.net.",
+          "a7-64.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "bol.com",
+      "rdap_data": {
+        "domain": "bol.com",
+        "registrant_organization": null,
+        "registrar": "Nom-iq Ltd. dba COM LAUDE",
+        "registry": "Verisign",
+        "creation_date": "1997-12-19T05:00:00Z",
+        "expiry_date": "2026-12-18T05:00:00Z",
+        "nameservers": [
+          "NS-CLOUD-C1.GOOGLEDOMAINS.COM",
+          "NS-CLOUD-C2.GOOGLEDOMAINS.COM",
+          "NS-CLOUD-C3.GOOGLEDOMAINS.COM",
+          "NS-CLOUD-C4.GOOGLEDOMAINS.COM"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/bol.com",
+        "timestamp": "2025-11-29T09:12:51.606235Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "79.170.100.42"
+        ],
+        "mx_records": [
+          "10 pro-mail-mx-003.bol.com.",
+          "10 pro-mail-mx-004.bol.com."
+        ],
+        "txt_records": [
+          "jamf-site-verification=YSBtYnCOMx_StMMd9v4Jag",
+          "google-site-verification=HPcKu0g7W4T--dUqF8YLAdbs9aMxVZEqr9iRPqF1VxQ",
+          "adobe-idp-site-verification=37d9adcf-fdfe-4135-9ba7-f4c4851881be",
+          "yI4CjFremeRILZz0hq69qQ+Peif++nUh+rUcU+2rI5whLjvSEBwa0uVrIXHve5DaiZNR4IJCmg9HoOaL8G7vEQ==",
+          "google-site-verification=weUk-X03vju7fHFVPKkmd41QTZ9WTZufRMp_0Hc3_no",
+          "apple-domain-verification=2hTppDkURROP8SgX",
+          "docker-verification=c1a61b3c-598f-47b0-824d-f8fc46de1814",
+          "miro-verification=6481d8fb7d0a4c76c9247bd1357ad12275eb5df7",
+          "atlassian-domain-verification=qja4taTJdbIsec2dDapRlfHQ9aVoagPM9NNQhqtf6mosVthUada2eIHVBvOavB8d",
+          "docusign=2391f023-cb58-4367-9285-9168007b3348",
+          "facebook-domain-verification=tizfmjk9p1z8o476jg4yyluaaxi4hi",
+          "duna-domain-verification-xb9p5g=vHDOPJjSjsmU0z1I5d9aL5WSd",
+          "docusign=ba572dac-d5db-430f-9c34-21a6192693e5",
+          "autodesk-domain-verification=WXcvEPa0neUYFznZf7VJ",
+          "teamviewer-sso-verification=8f82ce6dec464d6a919cd91b44522ffb",
+          "google-site-verification=b29v9e4M_R0JbhbWF3Z1OKCJyKyFG2WWznLBZstmc0o",
+          "docusign=837af1f7-16f8-4082-af71-e3e93aaf3e83",
+          "v=spf1 ip4:185.14.169.192/27 ip4:185.14.168.192/27 ip4:185.14.168.0/27 ip4:185.14.171.64/28 ip4:185.14.171.80/28 ip4:185.14.168.64/27 ip4:91.194.0.0/26 include:spf1.bol.com include:spf.protection.outlook.com -all",
+          "MS=ms69858635",
+          "dropbox-domain-verification=mrq43csxwfv7"
+        ],
+        "ns_records": [
+          "ns-cloud-c1.googledomains.com.",
+          "ns-cloud-c4.googledomains.com.",
+          "ns-cloud-c3.googledomains.com.",
+          "ns-cloud-c2.googledomains.com."
+        ]
+      }
+    },
+    {
+      "domain": "bol.nl",
+      "rdap_data": {
+        "domain": "bol.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:51.787472Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "94.124.92.155"
+        ],
+        "mx_records": [
+          "5 bol-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "v=spf1 a mx ip4:83.232.250.73 ip4:84.38.233.17/29 include:spf.protection.outlook.com include:spf.exclaimer.net include:spf.eu.exclaimer.net -all"
+        ],
+        "ns_records": [
+          "coco.ns.cloudflare.com.",
+          "marty.ns.cloudflare.com."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize.be",
+      "rdap_data": {
+        "domain": "delhaize.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:51.850699Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "95.101.133.75",
+          "95.101.133.153"
+        ],
+        "mx_records": [
+          "10 delhaize-be.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "_globalsign-domain-verification=N-1i1-g0oJjUgOTahMOyRvGKwhBCahwTX50XaafTt2",
+          "_mexm6g37j8yrz6be8fppdpvyrmnmstx",
+          "cLdTswbj6C3zMPcfignG/wfID+lA0IYmK1FvyokmSnW94wERwQ9ZuwWjmL5OpFXzMReOQrKx9cEKqhwCvH3k7g==",
+          "docusign=8d609c55-86a0-4a46-a8ed-b59014f61984",
+          "Dynatrace-site-verification=66db84f4-6bfa-40e2-95e3-2c4a3fe8e09e__5nkjacpln392iqjqnt6efea6rf",
+          "google-site-verification=Eqwt6UY270_GHqXy882IIAKcM3Sm2dSSh32b3OQ_4lg",
+          "google-site-verification=pBnfggpqANKwyrFT8N3NciXuGqXMjsewuBdH8lFFhCg",
+          "MS=ms53155693",
+          "v=spf1 ip4:148.163.157.101 ip4:148.163.158.24 ip4:198.190.28.0/24 ip4:65.220.13.52 ip4:194.78.122.120/29 ip4:213.52.186.0/24 ip4:50.31.35.139 ip4:5.61.115.112/28 ip4:5.61.115.80/28 ip4:79.125.5.172 ip4:54.75.129.225 ip4:91.198.243.226 ip4:52.28.135.238 include:spf.mandrillapp.com include:amazonses.com ip4:209.61.151.179 include:spf.augure.com include:spf.protection.outlook.com include:_spf.salesforce.com include:sendgrid.net include:spf.vanboxtel.hosting ~all",
+          "_t2sojh8ey8wnsaidcab6dkmknf6a40q",
+          "facebook-domain-verification=o2w9i1qxmykygkfzxleuvilri1tue3",
+          "apple-domain-verification=1eQtPwgtGbiJUF7v",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "teamviewer-sso-verification=e78321e1d661465a8d497acfada3d2de"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize.com",
+      "rdap_data": {
+        "domain": "delhaize.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "1999-01-20T05:00:00Z",
+        "expiry_date": "2026-01-20T05:00:00Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaize.com",
+        "timestamp": "2025-11-29T09:12:51.977197Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "185.63.20.20"
+        ],
+        "mx_records": [
+          "10 delhaize-com.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "_globalsign-domain-verification=QdOcql4KQuhM6Zv_iSN4YNCUtg7z331c1b5Eyz28Xm",
+          "docusign=9475008e-0500-4f56-86d4-794fa0eb6f9a",
+          "hcaxefxvIvrRDzy9BaNfgMQhnSI9FJaBsTCzkV4JN3ayCKHlU79iQhOBKHD8yr9t19fGKSaBi62I+fyBzisDKw==",
+          "mongodb-site-verification=MS73JgrpDm7E3hpo557nhUvYDm7wwDbP",
+          "MS=ms76955478",
+          "smartsheet-site-validation=pZmUPx7QAbKinzn0rCji78JXTgOdiobs",
+          "v=spf1 ip4:198.190.28.0/24 ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 ip4:194.78.122.126 ip4:65.220.13.52 include:spf.mandrillapp.com ip4:209.61.151.179 ip4:198.190.25.4 include:spf.workfront.com include:spf.protection.outlook.com include:sendgrid.net ~all",
+          "_fhp0n90pm4we2dglk4nzcyuli7nwl31",
+          "_a8aoto1nh4pnao8asyo4gb3d5yi3xkm",
+          "google-site-verification=HMeT01FrfqSZnapm3IRPuOV6e3Q6AReM83AeiQSpBDM",
+          "google-site-verification=R6OYkaTyQeN4cahlHtBxFC7ufUjjp8ef8YWSe0pbmHM",
+          "google-gws-recovery-domain-verification=45024366",
+          "onetrust-domain-verification=461921c1d5e241e78e4806aa7b4edd38",
+          "apple-domain-verification=zYLSCKhy7r4Gv2LQ",
+          "6m3wgh0p0twvmfqj44d8cj2809zp62fg",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "jamf-site-verification=oWmMyPDLFJxiZjr1c4wu9g"
+        ],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "etos.com",
+      "rdap_data": {
+        "domain": "etos.com",
+        "registrant_organization": null,
+        "registrar": "Tucows Domains Inc.",
+        "registry": "Verisign",
+        "creation_date": "1996-09-13T04:00:00Z",
+        "expiry_date": "2026-09-12T04:00:00Z",
+        "nameservers": [
+          "A1-249.AKAM.NET",
+          "A14-64.AKAM.NET",
+          "A6-65.AKAM.NET",
+          "A7-64.AKAM.NET",
+          "A8-65.AKAM.NET",
+          "A9-67.AKAM.NET"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/etos.com",
+        "timestamp": "2025-11-29T09:12:52.108686Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 include:_spf.etos.nl -all"
+        ],
+        "ns_records": [
+          "a7-64.akam.net.",
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a1-249.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "etos.nl",
+      "rdap_data": {
+        "domain": "etos.nl",
+        "registrant_organization": null,
+        "registrar": "KPN",
+        "registry": "SIDN",
+        "creation_date": "1995-04-23T22:00:00Z",
+        "expiry_date": null,
+        "nameservers": [
+          "a1-249.akam.net",
+          "a14-64.akam.net",
+          "a6-65.akam.net",
+          "a7-64.akam.net",
+          "a8-65.akam.net",
+          "a9-67.akam.net"
+        ],
+        "data_source": "https://rdap.sidn.nl/domain/etos.nl",
+        "timestamp": "2025-11-29T09:12:52.291185Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.9",
+          "2.16.6.5"
+        ],
+        "mx_records": [
+          "10 etos-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "MS=ms64223228",
+          "docusign=d6678cd3-85f4-4d8e-9acb-e3207fa09a00",
+          "v=spf1 include:_spf.etos.nl include:spf.protection.outlook.com include:servers.mcsv.net include:amazonses.com include:sendgrid.net include:spf.crowdtech.com a:production.eu01.etos.demandware.net -all",
+          "google-site-verification=FcVnsTyp2gFdusINVMWByZvH8oABgBi4mlVRF11defs",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "docker-verification=aac9419e-8e8c-41c6-ba96-e6f4229dd3a1"
+        ],
+        "ns_records": [
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "etosactie.nl",
+      "rdap_data": {
+        "domain": "etosactie.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:52.443640Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "etosplus.nl",
+      "rdap_data": {
+        "domain": "etosplus.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:52.619830Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "34.240.121.207",
+          "34.240.108.92"
+        ],
+        "mx_records": [
+          "10 etosplus-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "v=spf1 include:spf.protection.outlook.com include:amazonses.com -all",
+          "MS=ms11812049"
+        ],
+        "ns_records": [
+          "a7-64.akam.net.",
+          "a6-65.akam.net.",
+          "a14-64.akam.net.",
+          "a1-249.akam.net.",
+          "a8-65.akam.net.",
+          "a9-67.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "gall.nl",
+      "rdap_data": {
+        "domain": "gall.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:52.778792Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "2.16.6.5",
+          "2.16.6.23"
+        ],
+        "mx_records": [
+          "10 gall-nl.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "google-site-verification=S8kitke94CMveEh4wHxMpQrrG32eyzyGgR5rP25wYyc",
+          "google-site-verification=PFurKdMhVbebolbXoIStLqV5vzyeh9PPTq2lYo9c8mw",
+          "atlassian-domain-verification=/ZrBwaKNKauU8CQx6SaOCM8ULGtxEcNjcL4FEJlbZhavmF2fjTmHrgX/UPRKCM0T",
+          "docusign=300c7ef6-619d-4b2d-b7b4-d9b4ab93cbe6",
+          "v=spf1 include:_spf.gall.nl include:outmail.hireserve.com include:spf.protection.outlook.com include:_spf.salesforce.com include:spf.workfront.com include:sendgrid.net -all",
+          "google-site-verification=dBbNssRxW-U25FLsh5wVlq9tqAP5gT0KMr2ktFI0bFo",
+          "MS=ms99636480",
+          "docker-verification=1e43b6f6-9fbb-4d66-b5e4-8b9017d3c24c"
+        ],
+        "ns_records": [
+          "a9-67.akam.net.",
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "gall-en-gall.com",
+      "rdap_data": {
+        "domain": "gall-en-gall.com",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:53.229604Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "gallengall.nl",
+      "rdap_data": {
+        "domain": "gallengall.nl",
+        "registrant_organization": null,
+        "registrar": "KPN",
+        "registry": "SIDN",
+        "creation_date": "1999-10-04T07:10:19Z",
+        "expiry_date": null,
+        "nameservers": [
+          "a6-65.akam.net",
+          "a14-64.akam.net",
+          "a1-249.akam.net",
+          "a9-67.akam.net",
+          "a8-65.akam.net",
+          "a7-64.akam.net"
+        ],
+        "data_source": "https://rdap.sidn.nl/domain/gallengall.nl",
+        "timestamp": "2025-11-29T09:12:53.412620Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [
+          "google-site-verification=4PAShFZbI8v4_qpXVv4Wo8dxXJlELmxb6pMACGk3Qt4",
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a14-64.akam.net.",
+          "a7-64.akam.net.",
+          "a6-65.akam.net.",
+          "a9-67.akam.net.",
+          "a8-65.akam.net.",
+          "a1-249.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "gallzakelijk.nl",
+      "rdap_data": {
+        "domain": "gallzakelijk.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:53.565136Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "werkenbijahold.nl",
+      "rdap_data": {
+        "domain": "werkenbijahold.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:53.766888Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a6-65.akam.net.",
+          "a7-64.akam.net.",
+          "a8-65.akam.net.",
+          "a14-64.akam.net.",
+          "a1-249.akam.net.",
+          "a9-67.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "werkenbijbol.com",
+      "rdap_data": {
+        "domain": "werkenbijbol.com",
+        "registrant_organization": null,
+        "registrar": "Nom-iq Ltd. dba COM LAUDE",
+        "registry": "Verisign",
+        "creation_date": "2014-08-20T14:02:19Z",
+        "expiry_date": "2026-08-20T14:02:19Z",
+        "nameservers": [
+          "DNS1.NOVAGRAAF-DNS.COM",
+          "DNS2.NOVAGRAAF-DNS.NET",
+          "DNS3.NOVAGRAAF-DNS.NL",
+          "DNS4.NOVAGRAAF-DNS.EU"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/werkenbijbol.com",
+        "timestamp": "2025-11-29T09:12:53.877460Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "3.126.5.188",
+          "3.71.139.153",
+          "18.185.24.46"
+        ],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": [
+          "dns1.novagraaf-dns.com.",
+          "dns3.novagraaf-dns.nl.",
+          "dns2.novagraaf-dns.net.",
+          "dns4.novagraaf-dns.eu."
+        ]
+      }
+    },
+    {
+      "domain": "werkenbijbol.nl",
+      "rdap_data": {
+        "domain": "werkenbijbol.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:54.062055Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "werkenbijetos.nl",
+      "rdap_data": {
+        "domain": "werkenbijetos.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:54.222840Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "87.253.149.98"
+        ],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a6-65.akam.net.",
+          "a7-64.akam.net.",
+          "a8-65.akam.net.",
+          "a1-249.akam.net.",
+          "a14-64.akam.net.",
+          "a9-67.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "werkenbijgall.nl",
+      "rdap_data": {
+        "domain": "werkenbijgall.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:54.388845Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "87.253.149.98"
+        ],
+        "mx_records": [],
+        "txt_records": [
+          "v=spf1 -all"
+        ],
+        "ns_records": [
+          "a14-64.akam.net.",
+          "a1-249.akam.net.",
+          "a7-64.akam.net.",
+          "a9-67.akam.net.",
+          "a8-65.akam.net.",
+          "a6-65.akam.net."
+        ]
+      }
+    },
+    {
+      "domain": "pingodoce.pt",
+      "rdap_data": {
+        "domain": "pingodoce.pt",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:54.429235Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "104.110.191.51",
+          "104.110.191.23"
+        ],
+        "mx_records": [
+          "10 mxi.eu.mpssec.net.",
+          "10 mxh.eu.mpssec.net."
+        ],
+        "txt_records": [
+          "_4jy2hosp6it036uce9849u88ei6ss30",
+          "v=spf1 mx include:_spf.jmartins.com include:_spf.kmitd.com -all",
+          "google-site-verification=kjh0gc4v_yspBMEtSRiarjrxEgST1TNY_6AkdzgPV6k",
+          "MS=ms43009930",
+          "google-site-verification=GZ0H8ZktORpCM_seus-mIKhH8S-C3tzvuE7iwjeOMSk"
+        ],
+        "ns_records": [
+          "ns-cloud-c4.googledomains.com.",
+          "ns-cloud-c2.googledomains.com.",
+          "ns-cloud-c1.googledomains.com.",
+          "ns-cloud-c3.googledomains.com."
+        ]
+      }
+    },
+    {
+      "domain": "gallspirits.nl",
+      "rdap_data": {
+        "domain": "gallspirits.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.347361Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "gallwine.nl",
+      "rdap_data": {
+        "domain": "gallwine.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.502961Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "gallbestellen.nl",
+      "rdap_data": {
+        "domain": "gallbestellen.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.673025Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "addelhaize.be",
+      "rdap_data": {
+        "domain": "addelhaize.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.713085Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 custmx.cscdns.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "addelhaize.biz",
+      "rdap_data": {
+        "domain": "addelhaize.biz",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.758759Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 custmx.cscdns.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "addelhaize.eu",
+      "rdap_data": {
+        "domain": "addelhaize.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.797775Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "10 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "ad-delhaize.eu",
+      "rdap_data": {
+        "domain": "ad-delhaize.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:55.861208Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "10 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "alfa-beta.com",
+      "rdap_data": {
+        "domain": "alfa-beta.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2001-09-05T12:04:37Z",
+        "expiry_date": "2026-09-05T12:04:37Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/alfa-beta.com",
+        "timestamp": "2025-11-29T09:12:55.979976Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.36.18"
+        ],
+        "mx_records": [
+          "10 mail.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-de-leeuw.eu",
+      "rdap_data": {
+        "domain": "delhaize-de-leeuw.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.018431Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [
+          "100 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizegeschenk.be",
+      "rdap_data": {
+        "domain": "delhaizegeschenk.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.058854Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "100 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-geschenk.be",
+      "rdap_data": {
+        "domain": "delhaize-geschenk.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.097272Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.15.20",
+          "165.160.13.20"
+        ],
+        "mx_records": [
+          "100 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizegift.be",
+      "rdap_data": {
+        "domain": "delhaizegift.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.140598Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 delhaizegift-be.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "ldMLXFNrqtwLg693wuJG5gFvziHM6Ovu2xCrUpODfpaoB8OfvzQdkNKZ+84vkycknI3kRXeK1Ri8dQglC+rIIw==",
+          "MS=ms96915038",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-gift.be",
+      "rdap_data": {
+        "domain": "delhaize-gift.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.222320Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 mail.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizegift.com",
+      "rdap_data": {
+        "domain": "delhaizegift.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2001-08-22T13:09:57Z",
+        "expiry_date": "2026-08-22T13:09:57Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaizegift.com",
+        "timestamp": "2025-11-29T09:12:56.332530Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 delhaizegift-com.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "MS=ms84600326",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all",
+          "O0jakjrNcjRqgzJtSvKR2XQU2VkR65O2zRpWsErwzJNPXQJdozhvXSM27F3RMTCNNFqUZYXwku7XC3w6T+18ug=="
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-gift.com",
+      "rdap_data": {
+        "domain": "delhaize-gift.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2001-10-02T10:57:02Z",
+        "expiry_date": "2026-10-02T10:57:02Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaize-gift.com",
+        "timestamp": "2025-11-29T09:12:56.464322Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 mail.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizegifts.be",
+      "rdap_data": {
+        "domain": "delhaizegifts.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.502213Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 delhaizegifts-be.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "OjID5nfiQyp/M/y50AlxM/xliUDwI2VCjN6ruavGtWMytEsjzB2zc3mIylObIrd1ZFHByyzI0BoTBWYFMKdiSA==",
+          "MS=ms77544730",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-gifts.be",
+      "rdap_data": {
+        "domain": "delhaize-gifts.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.546146Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 mail.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizegifts.com",
+      "rdap_data": {
+        "domain": "delhaizegifts.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2001-10-02T10:58:01Z",
+        "expiry_date": "2026-10-02T10:58:01Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaizegifts.com",
+        "timestamp": "2025-11-29T09:12:56.690865Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 delhaizegifts-com.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all",
+          "u6Lg7gfPo9zRqhyEpMt/L92WoPy8yn5xOL+Nr2U4N+8krekgiZ0CD3P6pAIhkPcgQn60UPEgVGBY+pf5jDI6Fg==",
+          "MS=ms33181136"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-gifts.com",
+      "rdap_data": {
+        "domain": "delhaize-gifts.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2001-10-03T11:25:49Z",
+        "expiry_date": "2026-10-03T11:25:49Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaize-gifts.com",
+        "timestamp": "2025-11-29T09:12:56.896729Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.148"
+        ],
+        "mx_records": [
+          "10 mail.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizewineworld.be",
+      "rdap_data": {
+        "domain": "delhaizewineworld.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.938444Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "194.78.122.80"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-be.mail.protection.outlook.com.",
+          "50 smtp1.delhaize.be.",
+          "50 smtp2.delhaize.be."
+        ],
+        "txt_records": [
+          "google-site-verification=EdHhW9C1ankFqp3egELZCDwHyWQ5gLBNPyiU6nYADR0",
+          "MS=ms72397272",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all",
+          "xOWyAm2muzFaXa4HayzWbu2IKtI1rIeWS3HYVNhdwkGvdqaIuAk4JNwFsmtPZpVlF8lyCTtcWGiZiuKzAm6J6w=="
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-wineworld.be",
+      "rdap_data": {
+        "domain": "delhaize-wineworld.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:56.979287Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.154"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-be02b.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "MS=ms24672873",
+          "IeM2ts4foSCuxsmP3UhD/5nGS3q2FfW2PJAVv8HqXedXwMl8trWRztrOa7eRA0S7z6n7neAloamA7sj9N7/Jbw==",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-wine-world.be",
+      "rdap_data": {
+        "domain": "delhaize-wine-world.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.027564Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "213.181.33.154"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-be02bc.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "9jjyqIwXc5yhHaTLsDva4YBuVaZjx5cUoIPhch2AIp03rqFaYarldkgFpTlx3ebK/YV4ocKutYtr7bTyLqgmDQ==",
+          "MS=ms22678370",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizewineworld.com",
+      "rdap_data": {
+        "domain": "delhaizewineworld.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2000-11-02T16:35:25Z",
+        "expiry_date": "2026-11-02T15:35:25Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaizewineworld.com",
+        "timestamp": "2025-11-29T09:12:57.152495Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "194.78.122.80"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-com.mail.protection.outlook.com.",
+          "50 smtp2.delhaize.be.",
+          "50 smtp1.delhaize.be."
+        ],
+        "txt_records": [
+          "MS=ms30025162",
+          "v=spf1 mx ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 a:ac.addemar.com include:spf.protection.outlook.com ~all",
+          "Ml88dMaJ5IwYVqgM6sUMJa8AqrAq0ULYqu7CH7G4kMF5fnX4gbynEMsgvl680h3CSzRqMTSGGpub2yVG+EEBug=="
+        ],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-wineworld.com",
+      "rdap_data": {
+        "domain": "delhaize-wineworld.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2000-11-02T16:46:50Z",
+        "expiry_date": "2026-11-02T15:46:50Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaize-wineworld.com",
+        "timestamp": "2025-11-29T09:12:57.252368Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "194.78.122.80"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-com02b.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all",
+          "iiKuJ6WwMgeZynF1W5vZBtbuLHOY+H8xDw3OngAhVjrVo32PECTpETmNe8KOYnklE0M0Sl1KzaAWeifNkgS1vg==",
+          "MS=ms43671382"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-wine-world.com",
+      "rdap_data": {
+        "domain": "delhaize-wine-world.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2000-11-02T16:42:15Z",
+        "expiry_date": "2026-11-02T15:42:15Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/delhaize-wine-world.com",
+        "timestamp": "2025-11-29T09:12:57.359994Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "194.78.122.80"
+        ],
+        "mx_records": [
+          "10 delhaizewineworld-com02bc.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "CcA+vuVI5MfWNKig+VEWAMYsMXV/FqjocsjEZG0b+1ojBHRdjp6ME7DFIjvksMvjZMKiQp8YwHZDWkkacHbyfw==",
+          "MS=ms55184777",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 include:spf.protection.outlook.com -all"
+        ],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizewineworld.eu",
+      "rdap_data": {
+        "domain": "delhaizewineworld.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.411848Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.15.20",
+          "165.160.13.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "10 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaize-wine-world.eu",
+      "rdap_data": {
+        "domain": "delhaize-wine-world.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.466618Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [
+          "100 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "delhaizewineworld.lu",
+      "rdap_data": {
+        "domain": "delhaizewineworld.lu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.504411Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [
+          "100 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "pluskaart.be",
+      "rdap_data": {
+        "domain": "pluskaart.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.635471Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "100 relay.euronet.be.",
+          "50 mail.delhaize.be.",
+          "10 pluskaart-be.mail.protection.outlook.com."
+        ],
+        "txt_records": [
+          "sd/PW6ilusodamTFxtMoLOIrKUfQr1QHJ/nEvvQRA9iz1Sa7YHSvG/cYVbcqZQArlbEfDn1hNhWFRW6Jxv96lA==",
+          "MS=ms46663036",
+          "google-site-verification=6sK2ucZ11j4MnW4LYZxAVQn-2v7fQJcuRN5-IFP5miM",
+          "v=spf1 mx  ip4:148.163.157.101 ip4:148.163.158.24 ip4:194.78.122.17 ip4:194.78.122.18 a:ac.addemar.com include:spf.protection.outlook.com ~all"
+        ],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "plus-kaart.be",
+      "rdap_data": {
+        "domain": "plus-kaart.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.682834Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "15 relay.euronet.be.",
+          "10 mail.delhaize.be.",
+          "20 mail.euro.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "pluskaart.eu",
+      "rdap_data": {
+        "domain": "pluskaart.eu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.724818Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "pluspunten.be",
+      "rdap_data": {
+        "domain": "pluspunten.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.782958Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "15 relay.euronet.be.",
+          "10 mail.delhaize.be.",
+          "20 mail.euro.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "point-plus.lu",
+      "rdap_data": {
+        "domain": "point-plus.lu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.827931Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.13.20",
+          "165.160.15.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "20 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "pointsplus.be",
+      "rdap_data": {
+        "domain": "pointsplus.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.865850Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "15 relay.euronet.be.",
+          "10 mail.delhaize.be.",
+          "20 mail.euro.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "pointsplus.lu",
+      "rdap_data": {
+        "domain": "pointsplus.lu",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.923894Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.15.20",
+          "165.160.13.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "20 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "pointspluspunten.be",
+      "rdap_data": {
+        "domain": "pointspluspunten.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:57.966989Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "5 smtp2.delhaize.be.",
+          "5 smtp1.delhaize.be."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns2.cscdns.uk.",
+          "udns1.cscdns.net."
+        ]
+      }
+    },
+    {
+      "domain": "points-plus-punten.be",
+      "rdap_data": {
+        "domain": "points-plus-punten.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.018828Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "15 relay.euronet.be.",
+          "10 mail.delhaize.be.",
+          "20 mail.euro.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "promodelhaize.be",
+      "rdap_data": {
+        "domain": "promodelhaize.be",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.067197Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "165.160.15.20",
+          "165.160.13.20"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "100 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "wwwdelhaize.com",
+      "rdap_data": {
+        "domain": "wwwdelhaize.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2010-03-17T09:43:58Z",
+        "expiry_date": "2026-03-17T09:43:58Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/wwwdelhaize.com",
+        "timestamp": "2025-11-29T09:12:58.204629Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "10 relay1.netnames.net.",
+          "100 relay2.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "wwwdelhaizegroup.com",
+      "rdap_data": {
+        "domain": "wwwdelhaizegroup.com",
+        "registrant_organization": null,
+        "registrar": "CSC Corporate Domains, Inc.",
+        "registry": "Verisign",
+        "creation_date": "2010-03-17T09:43:57Z",
+        "expiry_date": "2026-03-17T09:43:57Z",
+        "nameservers": [
+          "UDNS1.CSCDNS.NET",
+          "UDNS2.CSCDNS.UK"
+        ],
+        "data_source": "https://rdap.verisign.com/com/v1/domain/wwwdelhaizegroup.com",
+        "timestamp": "2025-11-29T09:12:58.299233Z"
+      },
+      "dns_info": {
+        "a_records": [
+          "204.74.99.100"
+        ],
+        "mx_records": [
+          "100 relay2.netnames.net.",
+          "10 relay1.netnames.net."
+        ],
+        "txt_records": [],
+        "ns_records": [
+          "udns1.cscdns.net.",
+          "udns2.cscdns.uk."
+        ]
+      }
+    },
+    {
+      "domain": "select-bol.nl",
+      "rdap_data": {
+        "domain": "select-bol.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.464876Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "bol-select.nl",
+      "rdap_data": {
+        "domain": "bol-select.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.622921Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "etosvoeding.nl",
+      "rdap_data": {
+        "domain": "etosvoeding.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.785792Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    },
+    {
+      "domain": "etoshuidverzorging.nl",
+      "rdap_data": {
+        "domain": "etoshuidverzorging.nl",
+        "registrant_organization": null,
+        "registrar": null,
+        "registry": null,
+        "creation_date": null,
+        "expiry_date": null,
+        "nameservers": [],
+        "data_source": null,
+        "timestamp": "2025-11-29T09:12:58.948403Z"
+      },
+      "dns_info": {
+        "a_records": [],
+        "mx_records": [],
+        "txt_records": [],
+        "ns_records": []
+      }
+    }
+  ]
+}
