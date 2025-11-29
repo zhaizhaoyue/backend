@@ -254,12 +254,13 @@ class EnhancedDomainMonitor:
         
         return context
     
-    async def parse_with_deepseek(self, whois_text: str, domain: str) -> Dict:
+    async def parse_with_deepseek(self, whois_text: str, domain: str, source_url: str = None) -> Dict:
         """使用DeepSeek LLM解析WHOIS文本
         
         Args:
             whois_text: WHOIS文本内容
             domain: 域名
+            source_url: 数据源URL (可选)
             
         Returns:
             解析后的结构化数据
@@ -267,25 +268,142 @@ class EnhancedDomainMonitor:
         if not self.deepseek_key:
             return {}
         
-        prompt = f"""请从以下WHOIS数据中提取域名 {domain} 的结构化信息。
+        # 生成时间戳
+        from datetime import datetime, timezone
+        timestamp = datetime.now(timezone.utc).isoformat()
+        
+        # 如果没有提供source_url，使用默认值
+        if not source_url:
+            source_url = f"https://who.is/whois/{domain}"
+        
+        prompt = f"""You are a domain registration information extraction engine.
 
-WHOIS数据:
-{whois_text}
+Goal
 
-请以JSON格式返回以下字段（如果找不到某个字段，使用null）:
+From the input below, extract domain registration facts into a STRICT JSON table.
+
+You will receive:
+
+1. A small metadata header:
+   DATA_SOURCE: {source_url}
+   QUERY_TIMESTAMP: {timestamp}
+
+2. Raw HTML or plain text of a WHOIS / RDAP / registrar web page, including any legal notices, rate-limit warnings, or other noise.
+
+Your tasks:
+
+- Detect all domain records contained in the text. There may be one or multiple domains.
+- For each domain, create ONE JSON object with the following fields:
+
+  - domain                 (string)
+  - registrant_organization (string or null)
+  - registrar              (string or null)
+  - registry               (string, the TLD with a leading dot, e.g. ".be", ".com")
+  - creation_date          (string or null, preferred format "YYYY-MM-DD" if clearly given; otherwise copy the exact date string as-is)
+  - expiry_date            (string or null, same rule as creation_date)
+  - nameservers            (array of strings, each a nameserver hostname; empty array if none clearly present)
+  - data_sources           (array of strings; must at least contain the value from DATA_SOURCE)
+  - timestamp              (string; must exactly copy the value from QUERY_TIMESTAMP)
+
+Output format (VERY IMPORTANT):
+- Return ONLY a single JSON object, with this exact top-level structure:
+
 {{
-  "registrar": "注册商名称",
-  "registry": "注册局名称",
-  "registrant_org": "注册组织",
-  "creation_date": "创建日期（ISO格式）",
-  "expiry_date": "过期日期（ISO格式）",
-  "updated_date": "更新日期（ISO格式）",
-  "nameservers": ["名称服务器1", "名称服务器2"],
-  "status": ["域名状态1", "域名状态2"],
-  "registrant_country": "注册国家"
+  "domains": [
+    {{
+      "domain": "example.com",
+      "registrant_organization": null,
+      "registrar": "Example Registrar Ltd.",
+      "registry": ".com",
+      "creation_date": "2015-06-24",
+      "expiry_date": null,
+      "nameservers": [
+        "ns1.example.net",
+        "ns2.example.net"
+      ],
+      "data_sources": [
+        "https://www.example-registrar.com/whois/example.com"
+      ],
+      "timestamp": "{timestamp}"
+    }}
+  ]
 }}
 
-只返回JSON，不要其他解释。"""
+Extraction rules (CRITICAL):
+
+1. Do NOT invent, infer, or guess values.
+   - If a field is not explicitly present in the input, set it to:
+     - null for scalar fields (registrant_organization, registrar, creation_date, expiry_date)
+     - [] (empty array) for lists (nameservers, data_sources if DATA_SOURCE is missing for some reason).
+
+2. Domain:
+   - Use the exact domain labels as they appear in the record (e.g. "aholddelhaize.be").
+   - If the page clearly contains only one domain, still output an array with one JSON object.
+
+3. Registrar:
+   - Use the value next to labels such as "Registrar:", "Registrar Name:", "Registrar Name" or similar.
+   - Copy the registrar name as shown, without modification.
+
+4. Registrant_organization:
+   - Use the organization / company name of the registrant if it is explicitly provided under labels such as
+     "Registrant Organization:", "Registrant:", "Holder:", "Domain holder", etc.
+   - If only a person name or email is shown and it is not clearly an organization, you may still put the exact text
+     into registrant_organization.
+   - If the registrant is hidden, redacted, or not shown, set registrant_organization to null.
+   - NEVER infer the registrant from brand names, website content, or your own knowledge.
+
+5. Registry:
+   - Derive from the domain's top-level domain:
+       "aholddelhaize.be" -> ".be"
+       "example.com"      -> ".com"
+       "foo.org"          -> ".org"
+   - Always include the leading dot.
+
+6. Creation_date:
+   - Look for labels such as "Creation Date", "Created On", "Registered:", "Registered On", "Domain registered:" etc.
+   - If multiple date formats appear for the same field, pick the one most clearly linked to domain creation.
+   - If the date is clearly a standard format (e.g. "2015-06-24"), keep it as is.
+   - If the date is a long string (e.g. "Wed Jun 24 2015"), you may either:
+       (a) normalize to "2015-06-24" if it is unambiguous, OR
+       (b) copy the full original string.
+   - If no creation date is present, set creation_date to null.
+
+7. Expiry_date:
+   - Look for labels such as "Expiry Date", "Expiration Date", "Registry Expiry Date", "Renewal date", etc.
+   - Apply the same formatting rules as for creation_date.
+   - If no expiry date is present, set expiry_date to null.
+
+8. Nameservers:
+   - Collect all hostnames under labels such as "Name Server", "Nameservers", "Name servers", etc.
+   - Normalize by trimming spaces; keep them as plain strings (no need to lower-case, but you may do so).
+   - If no nameservers are clearly listed, use an empty array.
+
+9. Data_sources:
+   - Always include the exact string from DATA_SOURCE as one element of the array.
+   - If the input text itself clearly lists additional sources (for example: "Data from registry X and registrar Y"), you may add those as extra array elements, but only if they are explicitly named.
+   - NEVER fabricate additional sources.
+
+10. Timestamp:
+   - Copy the value from QUERY_TIMESTAMP exactly, without modification or reformatting.
+   - Do NOT generate your own timestamps.
+
+11. Ignore noise:
+   - Completely ignore WHOIS legal disclaimers, terms of use, anti-spam policies, and rate-limit messages.
+   - Do NOT place disclaimer text into any field.
+
+12. If the input contains zero recognizable domains:
+   - Return {{"domains": []}}
+
+The raw input starts after the line:
+=====BEGIN INPUT=====
+and ends before the line:
+=====END INPUT=====
+
+Now read the input and return ONLY the JSON described above.
+
+=====BEGIN INPUT=====
+{whois_text}
+=====END INPUT====="""
 
         try:
             async with httpx.AsyncClient(timeout=httpx.Timeout(60.0)) as client:
@@ -321,10 +439,31 @@ WHOIS数据:
                     
                     try:
                         parsed = json_module.loads(content)
-                        print(f"      ✓ DeepSeek解析成功")
-                        return parsed
-                    except:
-                        print(f"      ⚠️ DeepSeek返回的不是有效JSON")
+                        
+                        # 新的prompt返回 {"domains": [...]} 结构
+                        # 提取第一个domain并转换为旧格式以兼容现有代码
+                        if 'domains' in parsed and len(parsed['domains']) > 0:
+                            domain_data = parsed['domains'][0]
+                            
+                            # 映射字段名称 (新格式 -> 旧格式)
+                            result = {
+                                'registrar': domain_data.get('registrar'),
+                                'registry': domain_data.get('registry'),
+                                'registrant_org': domain_data.get('registrant_organization'),  # 映射到旧字段名
+                                'creation_date': domain_data.get('creation_date'),
+                                'expiry_date': domain_data.get('expiry_date'),
+                                'nameservers': domain_data.get('nameservers', []),
+                                'data_source': domain_data.get('data_sources', [source_url])[0] if domain_data.get('data_sources') else source_url,
+                                'timestamp': domain_data.get('timestamp'),
+                            }
+                            
+                            print(f"      ✓ DeepSeek解析成功")
+                            return result
+                        else:
+                            print(f"      ⚠️ DeepSeek返回的JSON中没有domains字段或为空")
+                            return {}
+                    except Exception as e:
+                        print(f"      ⚠️ DeepSeek返回的不是有效JSON: {e}")
                         return {}
                 else:
                     print(f"      ⚠️ DeepSeek API错误: {response.status_code}")
