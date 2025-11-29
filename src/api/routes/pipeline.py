@@ -322,11 +322,18 @@ async def upload_and_run_pipeline(
     Returns:
         Pipeline run response with run_id
     """
+    suffix = Path(file.filename).suffix.lower()
+    
     # Validate file type
-    if not file.filename.endswith(('.csv', '.xlsx', '.xls')):
+    if suffix not in ('.csv', '.xlsx', '.xls'):
         raise HTTPException(
             status_code=400,
-            detail="Invalid file type. Only CSV and Excel files are supported."
+            detail="Invalid file type. Only CSV and XLSX files are supported."
+        )
+    if suffix == '.xls':
+        raise HTTPException(
+            status_code=400,
+            detail="Legacy .xls is not supported. Please upload .xlsx or .csv."
         )
     
     # Ensure background tasks available (defensive for direct invocation)
@@ -338,42 +345,63 @@ async def upload_and_run_pipeline(
     
     try:
         # Save uploaded file temporarily
-        temp_file = Path(f"data/temp_upload_{run_id}{Path(file.filename).suffix}")
+        temp_file = Path(f"data/temp_upload_{run_id}{suffix}")
         temp_file.parent.mkdir(parents=True, exist_ok=True)
         
         content = await file.read()
         with open(temp_file, 'wb') as f:
             f.write(content)
         
-        # Parse domains from file
-        domains = []
-        
-        if file.filename.endswith('.csv'):
-            # Parse CSV
+        # Convert XLSX to CSV if needed
+        csv_source = temp_file
+        temp_converted = None
+        if suffix == '.xlsx':
             try:
-                with open(temp_file, 'r', encoding='utf-8', errors='ignore', newline='') as f:
-                    reader = csv.reader(f)
-                    for row in reader:
-                        if not row:
-                            continue
-                        domain = None
-                        # Prefer second column if present, else first non-empty cell
-                        if len(row) > 1 and row[1].strip():
-                            domain = row[1].strip()
-                        elif row[0].strip():
-                            domain = row[0].strip()
-                        
-                        if domain and domain.lower() not in ['domain', 'domain_name']:
-                            domains.append(domain)
+                from openpyxl import load_workbook
+            except ImportError:
+                temp_file.unlink(missing_ok=True)
+                raise HTTPException(status_code=500, detail="openpyxl is required to read .xlsx files")
+            
+            try:
+                wb = load_workbook(temp_file, read_only=True, data_only=True)
+                ws = wb.active
+                
+                temp_converted = Path(f"data/temp_upload_{run_id}.csv")
+                with open(temp_converted, 'w', encoding='utf-8', newline='') as out_f:
+                    writer = csv.writer(out_f)
+                    for row in ws.iter_rows(values_only=True):
+                        writer.writerow([
+                            '' if cell is None else str(cell).strip() for cell in row
+                        ])
+                csv_source = temp_converted
             except Exception as e:
                 temp_file.unlink(missing_ok=True)
-                raise HTTPException(status_code=400, detail=f"Failed to parse CSV: {str(e)}")
-        else:
-            # Parse Excel (would need openpyxl/pandas)
-            raise HTTPException(
-                status_code=400,
-                detail="Excel file support requires additional implementation. Please use CSV for now."
-            )
+                if temp_converted:
+                    temp_converted.unlink(missing_ok=True)
+                raise HTTPException(status_code=400, detail=f"Failed to convert XLSX: {str(e)}")
+        
+        # Parse domains from CSV source
+        domains = []
+        try:
+            with open(csv_source, 'r', encoding='utf-8', errors='ignore', newline='') as f:
+                reader = csv.reader(f)
+                for row in reader:
+                    if not row:
+                        continue
+                    domain = None
+                    # Prefer second column if present, else first non-empty cell
+                    if len(row) > 1 and row[1].strip():
+                        domain = row[1].strip()
+                    elif row[0].strip():
+                        domain = row[0].strip()
+                    
+                    if domain and domain.lower() not in ['domain', 'domain_name']:
+                        domains.append(domain)
+        except Exception as e:
+            temp_file.unlink(missing_ok=True)
+            if temp_converted:
+                temp_converted.unlink(missing_ok=True)
+            raise HTTPException(status_code=400, detail=f"Failed to parse CSV: {str(e)}")
         
         if not domains:
             temp_file.unlink(missing_ok=True)
@@ -390,8 +418,10 @@ async def upload_and_run_pipeline(
             30   # txt_poll_interval
         )
         
-        # Clean up temp upload file
+        # Clean up temp upload files
         temp_file.unlink(missing_ok=True)
+        if temp_converted:
+            temp_converted.unlink(missing_ok=True)
         
         return PipelineRunResponse(
             run_id=run_id,
