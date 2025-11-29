@@ -140,21 +140,21 @@ class TXTVerificationManager:
             return None
         
         instructions = f"""
-请在 DNS 中为域名 {task['domain']} 添加以下 TXT 记录：
+Please add the following TXT record in DNS for domain {task['domain']}:
 
-Host/名称: {task['txt_name']}
-Type/类型: TXT
-Value/值: {task['expected_token']}
+Host/Name: {task['txt_name']}
+Type: TXT
+Value: {task['expected_token']}
 
-添加完成后，系统将在 {task['max_attempts']} 分钟内自动检测并验证。
-当前已尝试: {task['attempts']}/{task['max_attempts']}
-状态: {task['status']}
+After adding, the system will automatically detect and verify within {task['max_attempts']} minutes.
+Current attempts: {task['attempts']}/{task['max_attempts']}
+Status: {task['status']}
 """
         
         if task['status'] == 'VERIFIED':
-            instructions += f"\n✓ 验证成功于: {task['verified_at']}"
+            instructions += f"\n✓ Verification succeeded at: {task['verified_at']}"
         elif task['status'] == 'FAILED':
-            instructions += f"\n✗ 验证失败: {task.get('fail_reason', '超过最大尝试次数')}"
+            instructions += f"\n✗ Verification failed: {task.get('fail_reason', 'Maximum attempts exceeded')}"
         
         return instructions.strip()
     

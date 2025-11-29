@@ -1,20 +1,20 @@
 services:
   - type: web
     name: domain-guardian-api
-    env: python
+    env: docker
     region: oregon
     plan: starter
-    buildCommand: "pip install -r requirements.txt && playwright install --with-deps chromium"
-    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.11
-      - key: API_NINJAS_KEY
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: MOMEN_API_URL
         sync: false
       - key: MOMEN_API_KEY
         sync: false
-      - key: MOMEN_WEBHOOK_URL
+      - key: FRONTEND_API_URL
         sync: false
-      - key: EVIDENCE_BASE_PATH
-        value: ./evidence
+      - key: FRONTEND_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
 

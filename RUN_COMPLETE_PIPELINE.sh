@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Complete Domain Verification Pipeline Runner
-# 完整域名验证Pipeline运行脚本
 
 echo "=========================================="
 echo "🚀 Complete Domain Verification Pipeline"

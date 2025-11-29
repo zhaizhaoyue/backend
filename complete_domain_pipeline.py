@@ -1,6 +1,5 @@
 """
 Complete Domain Verification Pipeline
-完整的域名验证Pipeline
 
 Pipeline stages:
 1. RDAP/WHOIS API lookup
@@ -9,7 +8,6 @@ Pipeline stages:
 4. TXT verification execution (DNS checking)
 
 All data organized by run_id in data/ folder
-所有数据按run_id组织在data/文件夹中
 """
 import asyncio
 import csv
@@ -74,28 +72,28 @@ class CompleteDomainPipeline:
         print(f"   💾 Metadata saved: {metadata_file.name}")
     
     async def parse_with_llm(self, page_text: str, domain: str, source_url: str) -> Dict:
-        """使用LLM解析playwright爬取的WHOIS文本
+        """Parse WHOIS text scraped by Playwright using LLM
         
         Args:
-            page_text: 页面文本内容
-            domain: 域名
-            source_url: 数据源URL
+            page_text: Page text content
+            domain: Domain name
+            source_url: Data source URL
             
         Returns:
-            解析后的结构化数据
+            Parsed structured data
         """
-        # 检查是否配置了DeepSeek API key
+        # Check if DeepSeek API key is configured
         if not settings.deepseek_api_key:
-            # 只在第一次显示提示
+            # Show warning only once
             if not hasattr(self, '_deepseek_warning_shown'):
-                print(f"\n      💡 未配置DeepSeek API，使用正则表达式解析（当前准确率70%）")
-                print(f"      💡 启用AI解析可提升至75-80%，成本约¥0.15/75域名")
-                print(f"      💡 设置: export DEEPSEEK_API_KEY=sk-your-key")
-                print(f"      💡 免费key: https://platform.deepseek.com\n")
+                print(f"\n      💡 DeepSeek API not configured, using regex parsing (current accuracy 70%)")
+                print(f"      💡 Enable AI parsing to improve to 75-80%, cost ~¥0.15/75 domains")
+                print(f"      💡 Set: export DEEPSEEK_API_KEY=sk-your-key")
+                print(f"      💡 Free key: https://platform.deepseek.com\n")
                 self._deepseek_warning_shown = True
             return {}
         
-        # 生成时间戳
+        # Generate timestamp
         timestamp = datetime.now(timezone.utc).isoformat()
         
         prompt = f"""You are a domain registration information extraction engine.
@@ -253,20 +251,20 @@ Now read the input and return ONLY the JSON described above.
                     content = data.get('choices', [{}])[0].get('message', {}).get('content', '')
                     usage = data.get('usage', {})
                     
-                    # 清理可能的markdown标记
+                    # Clean possible markdown markers
                     content = content.replace('```json', '').replace('```', '').strip()
                     
                     try:
                         parsed = json.loads(content)
                         
-                        # 新的prompt返回 {"domains": [...]} 结构
-                        # 提取第一个domain
+                        # New prompt returns {"domains": [...]} structure
+                        # Extract first domain
                         if 'domains' in parsed and len(parsed['domains']) > 0:
                             domain_data = parsed['domains'][0]
                             
-                            # 显示token使用量
+                            # Display token usage
                             total_tokens = usage.get('total_tokens', 0)
-                            print(f"      🤖 LLM解析成功 | 📊 Tokens: {total_tokens}")
+                            print(f"      🤖 LLM parsing successful | 📊 Tokens: {total_tokens}")
                             
                             return {
                                 'registrant_org': domain_data.get('registrant_organization'),
@@ -279,13 +277,13 @@ Now read the input and return ONLY the JSON described above.
                                 'timestamp': domain_data.get('timestamp'),
                             }
                         else:
-                            print(f"      ⚠️  LLM返回空结果，fallback到regex")
+                            print(f"      ⚠️  LLM returned empty result, fallback to regex")
                             return {}
                     except Exception as e:
-                        print(f"      ⚠️  LLM解析失败: {str(e)[:30]}, fallback到regex")
+                        print(f"      ⚠️  LLM parsing failed: {str(e)[:30]}, fallback to regex")
                         return {}
                 else:
-                    print(f"      ⚠️  LLM API错误: {response.status_code}, fallback到regex")
+                    print(f"      ⚠️  LLM API error: {response.status_code}, fallback to regex")
                     return {}
         
         except Exception as e:
@@ -486,8 +484,8 @@ Now read the input and return ONLY the JSON described above.
             
             # Go to SIDN WHOIS page
             url = f"https://www.sidn.nl/whois"
-            await page.goto(url, wait_until='networkidle', timeout=30000)
-            await page.wait_for_timeout(2000)
+            await page.goto(url, wait_until='networkidle', timeout=10000)
+            await page.wait_for_timeout(1000)
             
             # Find and fill the search input
             # The input field might be named 'domain' or have a specific id
@@ -506,7 +504,7 @@ Now read the input and return ONLY the JSON described above.
                 await page.press('input[name="domain"]', 'Enter')
             
             # Wait for results to load
-            await page.wait_for_timeout(3000)
+            await page.wait_for_timeout(1500)
             
             # Take screenshot of results
             screenshot_file = self.screenshots_dir / f"{index:03d}_{domain.replace('.', '_')}_sidn.png"
@@ -535,7 +533,7 @@ Now read the input and return ONLY the JSON described above.
                         continue
                 
                 if clicked:
-                    await page.wait_for_timeout(2000)
+                    await page.wait_for_timeout(1000)
                     
                     # Take another screenshot after clicking
                     screenshot_file2 = self.screenshots_dir / f"{index:03d}_{domain.replace('.', '_')}_sidn_details.png"
@@ -818,16 +816,20 @@ Now read the input and return ONLY the JSON described above.
             return False, None, str(e)
     
     async def stage4_txt_verification_execution(self, txt_tasks: List[Dict], 
-                                                wait_time: int = 30,
-                                                max_attempts: int = 10,
-                                                poll_interval: int = 30):
+                                                wait_time: int = 300,
+                                                max_attempts: int = 1,
+                                                poll_interval: int = 60):
         """Stage 4: Execute TXT verification by checking DNS records.
         
         Args:
             txt_tasks: List of TXT tasks from stage 3
-            wait_time: Initial wait time before first check (seconds)
-            max_attempts: Maximum number of polling attempts
-            poll_interval: Time between polling attempts (seconds)
+            wait_time: Initial wait time before first check (seconds, default: 300 = 5 minutes)
+            max_attempts: Maximum number of polling attempts (default: 1)
+            poll_interval: Time between polling attempts (seconds, default: 60 = 1 minute)
+            
+        Note:
+            Total wait time = wait_time + (max_attempts * poll_interval)
+            Default: 5 minutes + (1 * 1 minute) = 6 minutes total
         """
         
         if not txt_tasks:
@@ -1167,32 +1169,32 @@ Now read the input and return ONLY the JSON described above.
         print(f"   - From Stage 2 (Playwright): {sum(1 for r in self.stage2_results if r.get('success'))}")
 
 
-async def main():
+    async def main():
     """Main entry point."""
     
     # Check DeepSeek API configuration
     if not settings.deepseek_api_key:
         print("\n" + "=" * 80)
-        print("💡 提示: DeepSeek API 未配置")
+        print("💡 Notice: DeepSeek API not configured")
         print("=" * 80)
-        print("当前将使用正则表达式解析（准确率约70%）")
+        print("Currently will use regex parsing (accuracy ~70%)")
         print()
-        print("要启用AI智能解析（准确率提升至75-80%）：")
-        print("  1. 获取免费key: https://platform.deepseek.com")
-        print("  2. 设置环境变量: export DEEPSEEK_API_KEY=sk-your-key")
-        print("  3. 或创建.env文件: echo 'DEEPSEEK_API_KEY=sk-xxx' > .env")
+        print("To enable AI smart parsing (accuracy improves to 75-80%):")
+        print("  1. Get free key: https://platform.deepseek.com")
+        print("  2. Set environment variable: export DEEPSEEK_API_KEY=sk-your-key")
+        print("  3. Or create .env file: echo 'DEEPSEEK_API_KEY=sk-xxx' > .env")
         print()
-        print("成本: 约¥0.15/75域名 (非常便宜)")
+        print("Cost: ~¥0.15/75 domains (very cheap)")
         print("=" * 80)
         
         import os
-        response = input("\n继续使用正则表达式解析? (Y/n): ").strip().lower()
+        response = input("\nContinue with regex parsing? (Y/n): ").strip().lower()
         if response == 'n':
-            print("\n请配置DeepSeek API后重新运行")
+            print("\nPlease configure DeepSeek API and run again")
             return
         print()
     else:
-        print(f"\n✅ DeepSeek API 已配置，将使用AI智能解析")
+        print(f"\n✅ DeepSeek API configured, will use AI smart parsing")
         print(f"   API Key: {settings.deepseek_api_key[:10]}...{settings.deepseek_api_key[-4:]}\n")
     
     # Generate run ID

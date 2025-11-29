@@ -8,6 +8,9 @@ from pydantic_settings import BaseSettings
 from functools import lru_cache
 
 
+DEEPSEEK_FALLBACK_KEY = "sk-65a882ec0bd94ae3a855b57a757ff12b"
+
+
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
     
@@ -60,6 +63,11 @@ class Settings(BaseSettings):
     def __init__(self, **kwargs):
         """Initialize settings and create necessary directories."""
         super().__init__(**kwargs)
+        
+        # Fallback so DeepSeek works even when environment variables are missing
+        if not self.deepseek_api_key:
+            self.deepseek_api_key = DEEPSEEK_FALLBACK_KEY
+        
         self._ensure_directories()
     
     def _ensure_directories(self):
@@ -86,4 +94,3 @@ def get_settings() -> Settings:
 
 # Global settings instance
 settings = get_settings()
-

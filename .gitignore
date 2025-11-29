@@ -20,7 +20,7 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
+data
 # Virtual Environment
 venv/
 ENV/
@@ -44,6 +44,8 @@ evidence/
 evidence_screenshots/
 test_results.json
 enhanced_test_results.json
+test_*.py
+test_*.csv
 
 # Logs
 *.log
@@ -52,4 +54,8 @@ logs/
 # Database
 *.db
 *.sqlite3
+
+# Temporary files
+temp_*
+*_temp.*
 
