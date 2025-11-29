@@ -251,5 +251,5 @@ class RDAPClient:
             'raw_status': [],
             'data_source': None,
             'data_source_type': 'failed',
+            'registry': None
         }, ''
-

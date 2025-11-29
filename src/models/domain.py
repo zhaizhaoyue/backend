@@ -57,7 +57,7 @@ class TXTVerificationTask(BaseModel):
     expected_token: str  # Generated verification token
     status: str  # "WAITING", "VERIFIED", "FAILED", "EXPIRED"
     attempts: int = 0
-    max_attempts: int = 60
+    max_attempts: int = 1
     last_checked_at: Optional[datetime] = None
     verified_at: Optional[datetime] = None
     fail_reason: Optional[str] = None
@@ -78,4 +78,3 @@ class TXTVerificationStatus(BaseModel):
     instructions: Optional[str] = None
     verified_at: Optional[datetime] = None
     fail_reason: Optional[str] = None
-

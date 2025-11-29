@@ -82,7 +82,7 @@ class TXTVerificationManager:
         return False
     
     def create_txt_task(self, domain: str, case_id: str, 
-                       max_attempts: int = 60) -> Tuple[str, str]:
+                       max_attempts: int = 1) -> Tuple[str, str]:
         """Create a new TXT verification task.
         
         Args:
@@ -241,4 +241,3 @@ Status: {task['status']}
             ownership_status=ownership_status,
             ownership_reason=ownership_reason
         )
-

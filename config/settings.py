@@ -26,11 +26,12 @@ class Settings(BaseSettings):
     # CORS Settings
     cors_origins: list = ["*"]  # Configure appropriately for production
     
-    # API Keys
+# API Keys
     api_ninjas_key: Optional[str] = None
     # Note: DeepSeek is only needed for enhanced_domain_monitor.py (parsing raw WHOIS text)
     # The core API (main_refactored.py) uses RDAP/WHOIS JSON APIs and doesn't need LLM
-    deepseek_api_key: Optional[str] = None  # Optional: Only for enhanced monitoring features
+    # Default to built-in key so the API is always usable even without env vars.
+    deepseek_api_key: Optional[str] = DEEPSEEK_FALLBACK_KEY
     openai_api_key: Optional[str] = None    # Optional: Alternative LLM provider
     
     # Database Configuration

@@ -31,7 +31,7 @@ from src.core.rdap_client import RDAPClient
 from src.core.txt_verification import TXTVerificationManager
 from src.models.domain import DomainResult
 from src.utils.csv_exporter import CSVExporter
-from config.settings import settings
+from config.settings import settings, DEEPSEEK_FALLBACK_KEY
 
 
 class CompleteDomainPipeline:
@@ -71,6 +71,7 @@ class CompleteDomainPipeline:
             json.dump(data, f, indent=2, default=str)
         print(f"   💾 Metadata saved: {metadata_file.name}")
     
+    
     async def parse_with_llm(self, page_text: str, domain: str, source_url: str) -> Dict:
         """Parse WHOIS text scraped by Playwright using LLM
         
@@ -82,8 +83,9 @@ class CompleteDomainPipeline:
         Returns:
             Parsed structured data
         """
-        # Check if DeepSeek API key is configured
-        if not settings.deepseek_api_key:
+        # Check if DeepSeek API key is configured (fallback to built-in key)
+        api_key = settings.deepseek_api_key or DEEPSEEK_FALLBACK_KEY
+        if not api_key:
             # Show warning only once
             if not hasattr(self, '_deepseek_warning_shown'):
                 print(f"\n      💡 DeepSeek API not configured, using regex parsing (current accuracy 70%)")
@@ -92,6 +94,10 @@ class CompleteDomainPipeline:
                 print(f"      💡 Free key: https://platform.deepseek.com\n")
                 self._deepseek_warning_shown = True
             return {}
+        
+        # Show which key is being used (obscured) and whether it came from fallback
+        key_source = "fallback" if api_key == DEEPSEEK_FALLBACK_KEY else "env"
+        print(f"      🤖 DeepSeek call ({key_source} key): {api_key[:10]}...{api_key[-4:]}")
         
         # Generate timestamp
         timestamp = datetime.now(timezone.utc).isoformat()
@@ -230,7 +236,7 @@ Now read the input and return ONLY the JSON described above.
                 response = await client.post(
                     "https://api.deepseek.com/v1/chat/completions",
                     headers={
-                        "Authorization": f"Bearer {settings.deepseek_api_key}",
+                        "Authorization": f"Bearer {api_key}",
                         "Content-Type": "application/json"
                     },
                     json={
@@ -369,8 +375,24 @@ Now read the input and return ONLY the JSON described above.
     async def stage2_playwright_scraping(self, failed_domains: List[str]):
         """Stage 2: Playwright scraping for API failures."""
         
+        stage2_file = self.intermediate_dir / "stage2_playwright_results.json"
+        txt_needed_file = self.intermediate_dir / "stage2_need_txt_verification.txt"
+        
         if not failed_domains:
             print("\n✅ No domains need Playwright scraping (all succeeded in Stage 1)")
+            # Persist empty artifacts so run folder always has Stage 2 outputs
+            with open(stage2_file, 'w', encoding='utf-8') as f:
+                json.dump([], f, indent=2)
+            with open(txt_needed_file, 'w') as f:
+                f.write('')
+            self.save_metadata('2', {
+                'stage': 'Playwright Scraping',
+                'total_domains': 0,
+                'successful': 0,
+                'failed': 0,
+                'success_rate': "N/A",
+                'timestamp': datetime.now().isoformat()
+            })
             return []
         
         print("\n" + "=" * 80)
@@ -546,19 +568,18 @@ Now read the input and return ONLY the JSON described above.
             page_text = await page.inner_text('body')
             
             # Use LLM to parse the content (same prompt as who.is)
-            if settings.deepseek_api_key:
-                llm_result = await self.parse_with_llm(page_text, domain, url)
-                
-                if llm_result:
-                    result.update(llm_result)
-                    result['data_source'] = 'sidn.nl (Playwright + LLM)'
+            llm_result = await self.parse_with_llm(page_text, domain, url)
+            
+            if llm_result:
+                result.update(llm_result)
+                result['data_source'] = 'sidn.nl (Playwright + LLM)'
+                result['success'] = True
+            else:
+                # Try regex as fallback
+                result.update(self._parse_sidn_with_regex(page_text))
+                if result['creation_date'] or result['registrar']:
                     result['success'] = True
-                else:
-                    # Try regex as fallback
-                    result.update(self._parse_sidn_with_regex(page_text))
-                    if result['creation_date'] or result['registrar']:
-                        result['success'] = True
-                        result['parsing_method'] = 'regex'
+                    result['parsing_method'] = 'regex'
             
             await page.close()
             
@@ -639,17 +660,16 @@ Now read the input and return ONLY the JSON described above.
             # Get page content
             page_text = await page.inner_text('body')
             
-            # Try LLM parsing first if available
-            if settings.deepseek_api_key:
-                llm_result = await self.parse_with_llm(page_text, domain, url)
-                
-                if llm_result:
-                    # Use LLM results
-                    result.update(llm_result)
-                    result['parsing_method'] = 'llm'
-                    result['success'] = True
-                    await page.close()
-                    return result
+            # Try LLM parsing first
+            llm_result = await self.parse_with_llm(page_text, domain, url)
+            
+            if llm_result:
+                # Use LLM results
+                result.update(llm_result)
+                result['parsing_method'] = 'llm'
+                result['success'] = True
+                await page.close()
+                return result
             
             # Fallback to regex parsing if LLM not available or failed
             # Extract creation date
@@ -709,7 +729,7 @@ Now read the input and return ONLY the JSON described above.
                 task_id, token = self.txt_manager.create_txt_task(
                     domain=domain,
                     case_id=self.run_id,
-                    max_attempts=60
+                    max_attempts=1
                 )
                 
                 txt_tasks.append({
@@ -958,7 +978,7 @@ Now read the input and return ONLY the JSON described above.
     async def run_complete_pipeline(self, input_csv: str, 
                                     enable_txt_verification: bool = True,
                                     txt_wait_time: int = 30,
-                                    txt_max_attempts: int = 10,
+                                    txt_max_attempts: int = 1,
                                     txt_poll_interval: int = 30):
         """Run the complete 4-stage pipeline.
         
@@ -1147,7 +1167,7 @@ Now read the input and return ONLY the JSON described above.
                     domain=stage2_result['domain'],
                     registrant_organization=stage2_result.get('registrant_org'),
                     registrar=stage2_result.get('registrar'),
-                    registry=None,  # Playwright doesn't provide registry info
+                    registry=stage2_result.get('registry'),
                     creation_date=stage2_result.get('creation_date'),
                     expiry_date=stage2_result.get('expiry_date'),
                     nameservers=stage2_result.get('nameservers', []),

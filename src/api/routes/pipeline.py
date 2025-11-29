@@ -52,7 +52,7 @@ class PipelineRunRequest(BaseModel):
     domains: List[str]
     enable_txt_verification: bool = False
     txt_wait_time: int = 30
-    txt_max_attempts: int = 10
+    txt_max_attempts: int = 1
     txt_poll_interval: int = 30
 
 
@@ -329,6 +329,10 @@ async def upload_and_run_pipeline(
             detail="Invalid file type. Only CSV and Excel files are supported."
         )
     
+    # Ensure background tasks available (defensive for direct invocation)
+    if background_tasks is None:
+        background_tasks = BackgroundTasks()
+    
     # Generate run ID
     run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
     
@@ -346,13 +350,24 @@ async def upload_and_run_pipeline(
         
         if file.filename.endswith('.csv'):
             # Parse CSV
-            with open(temp_file, 'r', encoding='utf-8') as f:
-                reader = csv.reader(f)
-                for row in reader:
-                    if row and len(row) > 1:  # Skip empty rows
-                        domain = row[1].strip()  # Assuming domain is in 2nd column
-                        if domain and domain.lower() not in ['domain', 'domain_name', '']:
+            try:
+                with open(temp_file, 'r', encoding='utf-8', errors='ignore', newline='') as f:
+                    reader = csv.reader(f)
+                    for row in reader:
+                        if not row:
+                            continue
+                        domain = None
+                        # Prefer second column if present, else first non-empty cell
+                        if len(row) > 1 and row[1].strip():
+                            domain = row[1].strip()
+                        elif row[0].strip():
+                            domain = row[0].strip()
+                        
+                        if domain and domain.lower() not in ['domain', 'domain_name']:
                             domains.append(domain)
+            except Exception as e:
+                temp_file.unlink(missing_ok=True)
+                raise HTTPException(status_code=400, detail=f"Failed to parse CSV: {str(e)}")
         else:
             # Parse Excel (would need openpyxl/pandas)
             raise HTTPException(
@@ -609,4 +624,3 @@ async def get_external_api_config():
             "frontend_configured": bool(external_api_config.frontend_api_url and external_api_config.frontend_api_key)
         }
     )
-

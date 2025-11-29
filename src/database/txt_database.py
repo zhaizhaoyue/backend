@@ -47,7 +47,7 @@ class TXTDatabase:
                     expected_token TEXT NOT NULL,
                     status TEXT NOT NULL,
                     attempts INTEGER DEFAULT 0,
-                    max_attempts INTEGER DEFAULT 60,
+                    max_attempts INTEGER DEFAULT 1,
                     last_checked_at TEXT,
                     verified_at TEXT,
                     fail_reason TEXT,
@@ -344,4 +344,3 @@ class TXTDatabase:
             Dictionary representation
         """
         return dict(row)
-
