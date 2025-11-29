@@ -1169,7 +1169,7 @@ Now read the input and return ONLY the JSON described above.
         print(f"   - From Stage 2 (Playwright): {sum(1 for r in self.stage2_results if r.get('success'))}")
 
 
-    async def main():
+async def main():
     """Main entry point."""
     
     # Check DeepSeek API configuration
@@ -1187,7 +1187,6 @@ Now read the input and return ONLY the JSON described above.
         print("Cost: ~¥0.15/75 domains (very cheap)")
         print("=" * 80)
         
-        import os
         response = input("\nContinue with regex parsing? (Y/n): ").strip().lower()
         if response == 'n':
             print("\nPlease configure DeepSeek API and run again")
@@ -1216,4 +1215,3 @@ Now read the input and return ONLY the JSON described above.
 
 if __name__ == "__main__":
     asyncio.run(main())
-
