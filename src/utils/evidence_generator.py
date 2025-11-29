@@ -134,7 +134,7 @@ class EvidenceGenerator:
                         <span style="font-weight: 600;">📸 Evidence Source:</span>
                         <span style="opacity: 0.95;">{source_url}</span>
                         <span style="margin-left: auto; font-size: 12px; opacity: 0.8;">
-                            {new Date().toLocaleString()}
+                            ${{new Date().toLocaleString()}}
                         </span>
                     `;
                     document.body.insertBefore(watermark, document.body.firstChild);
@@ -294,4 +294,3 @@ class EvidenceGenerator:
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         await self.close()
-

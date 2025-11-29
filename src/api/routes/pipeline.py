@@ -580,6 +580,40 @@ async def download_report_json(run_id: str):
     )
 
 
+@router.get("/{run_id}/results/json")
+async def get_results_json(run_id: str):
+    """
+    Get domain results as JSON array.
+    
+    Args:
+        run_id: Pipeline run ID
+        
+    Returns:
+        JSON array of domain results
+    """
+    import csv
+    import json
+    
+    csv_file = Path(f"data/run_{run_id}/results/all_results_{run_id}.csv")
+    
+    if not csv_file.exists():
+        raise HTTPException(status_code=404, detail="Results file not found")
+    
+    # Read CSV and convert to JSON
+    results = []
+    with open(csv_file, 'r', encoding='utf-8') as f:
+        csv_reader = csv.DictReader(f)
+        for row in csv_reader:
+            # Convert nameservers string back to array
+            if row.get('nameservers'):
+                row['nameservers'] = [ns.strip() for ns in row['nameservers'].split(';') if ns.strip()]
+            else:
+                row['nameservers'] = []
+            results.append(row)
+    
+    return JSONResponse(content=results)
+
+
 @router.get("/{run_id}/screenshots/{filename}")
 async def download_screenshot(run_id: str, filename: str):
     """

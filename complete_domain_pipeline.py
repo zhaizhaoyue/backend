@@ -378,6 +378,10 @@ Now read the input and return ONLY the JSON described above.
         stage2_file = self.intermediate_dir / "stage2_playwright_results.json"
         txt_needed_file = self.intermediate_dir / "stage2_need_txt_verification.txt"
         
+        # Ensure directories exist (defensive in case run folder was cleaned)
+        self.intermediate_dir.mkdir(parents=True, exist_ok=True)
+        self.results_dir.mkdir(parents=True, exist_ok=True)
+        
         if not failed_domains:
             print("\n✅ No domains need Playwright scraping (all succeeded in Stage 1)")
             # Persist empty artifacts so run folder always has Stage 2 outputs
